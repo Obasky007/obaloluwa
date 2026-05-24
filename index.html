@@ -4,7 +4,7 @@
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYYGJ2TRK3"></script>
-    
+
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -39,8 +39,14 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
             <li>
-                <a onclick="gtag('event', 'whatsapp_click')" href="https://wa.me/2347075255079?text=Hi%20Obaloluwa%2C%20I%20want%20to%20hire%20you%20for%20a%20website"
-                    target="_blank" class="nav-cta">Hire Me <i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://wa.me/2347075255079?text=Hi%20Obaloluwa%2C%20I%20want%20to%20hire%20you%20for%20a%20website"
+                    target="_blank" class="nav-cta" onclick="gtag('event', 'navbar_hire_click', {
+                        event_category: 'Navigation',
+                        event_label: 'Navbar Hire Me Button'
+                    })">
+                    Hire Me
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
             </li>
         </ul>
         <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
@@ -53,8 +59,13 @@
         <a href="#work" class="mobile-link">Work</a>
         <a href="#services" class="mobile-link">Services</a>
         <a href="#about" class="mobile-link">About</a>
-        <a onclick="gtag('event', 'whatsapp_click')" href="https://wa.me/2347075255079?text=Hi%20Obaloluwa%2C%20I%20want%20to%20hire%20you%20for%20a%20website"
-            target="_blank" class="nav-cta">Hire Me <i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://wa.me/2347075255079?text=Hi%20Obaloluwa%2C%20I%20want%20to%20hire%20you%20for%20a%20website"
+            target="_blank" class="nav-cta" onclick="gtag('event', 'navbar_whatsapp_click', {
+                event_category: 'Navigation CTA',
+                event_label: 'Hire Me Button'
+            })">
+            Hire Me <i class="fa-brands fa-whatsapp"></i>
+        </a>
     </div>
 
     <!-- HERO -->
@@ -67,9 +78,13 @@
         <p class="hero-sub">React · JavaScript · UI/UX — Fast, responsive websites for global businesses that actually
             drive results.</p>
         <div class="hero-actions">
-            <a onclick="gtag('event', 'whatsapp_click')" href="https://wa.me/2347075255079?text=Hi%20Obaloluwa%2C%20I%20want%20to%20hire%20you%20for%20a%20website"
-                target="_blank" class="btn-primary">
-                <i class="fa-brands fa-whatsapp"></i> Hire Me on WhatsApp
+            <a href="https://wa.me/2347075255079?text=Hi%20Obaloluwa%2C%20I%20want%20to%20hire%20you%20for%20a%20website"
+                target="_blank" class="btn-primary" onclick="gtag('event', 'hero_whatsapp_click', {
+                    event_category: 'CTA Buttons',
+                    event_label: 'Hero Hire Me WhatsApp'
+                })">
+                <i class="fa-brands fa-whatsapp"></i>
+                Hire Me on WhatsApp
             </a>
             <a href="#work" class="btn-secondary">See My Work <i class="fa-solid fa-arrow-down"></i></a>
         </div>
@@ -249,24 +264,63 @@
         <h2 class="cta-big">Ready to get your<br>business <em>online?</em></h2>
         <p class="cta-sub">Send me a message on WhatsApp — tell me about your business and I'll get back to you fast.
         </p>
-        <a onclick="gtag('event', 'whatsapp_click')" href="https://wa.me/2347075255079?text=Hi%20Obaloluwa%2C%20I%20want%20to%20hire%20you%20for%20a%20website"
-            target="_blank" class="btn-primary" style="font-size:1.05rem; padding: 1rem 2.5rem; margin: 0 auto;">
-            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        <a href="https://wa.me/2347075255079?text=Hi%20Obaloluwa%2C%20I%20want%20to%20hire%20you%20for%20a%20website"
+            target="_blank" class="btn-primary" style="font-size:1.05rem; padding: 1rem 2.5rem; margin: 0 auto;"
+            onclick="gtag('event', 'whatsapp_hire_click', {
+                event_category: 'CTA Buttons',
+                event_label: 'Hero WhatsApp Hire Button'
+            })">
+            <i class="fa-brands fa-whatsapp"></i>
+            Chat on WhatsApp
         </a>
     </div>
 
     <!-- FOOTER -->
     <footer>
         <p>© 2026 Obaloluwa Ademuyiwa</p>
+
         <div class="footer-links">
-            <a onclick="gtag('event', 'whatsapp_click')" href="mailto:obaloluwawebdesign@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-            <a onclick="gtag('event', 'whatsapp_click')" href="https://instagram.com/obaloluwa.dev" target="_blank" title="Instagram"><i
-                    class="fa-brands fa-instagram"></i></a>
-            <a onclick="gtag('event', 'whatsapp_click')" href="https://github.com/Obasky007" target="_blank" title="Github"><i
-                    class="fa-brands fa-github"></i></a>
-            <a onclick="gtag('event', 'whatsapp_click')" href="https://x.com/dev_o_b_a" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-            <a onclick="gtag('event', 'whatsapp_click')" href="https://wa.me/2347075255079" target="_blank" title="WhatsApp"><i
-                    class="fa-brands fa-whatsapp"></i></a>
+
+            <!-- Email -->
+            <a href="mailto:obaloluwawebdesign@gmail.com" title="Email" onclick="gtag('event', 'email_click', {
+                event_category: 'Footer Links',
+                event_label: 'Email'
+            })">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/obaloluwa.dev" target="_blank" title="Instagram" onclick="gtag('event', 'instagram_click', {
+                event_category: 'Footer Links',
+                event_label: 'Instagram'
+            })">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <!-- Github -->
+            <a href="https://github.com/Obasky007" target="_blank" title="Github" onclick="gtag('event', 'github_click', {
+                event_category: 'Footer Links',
+                event_label: 'Github'
+            })">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <!-- Twitter/X -->
+            <a href="https://x.com/dev_o_b_a" target="_blank" title="Twitter" onclick="gtag('event', 'twitter_click', {
+                event_category: 'Footer Links',
+                event_label: 'Twitter'
+            })">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/2347075255079" target="_blank" title="WhatsApp" onclick="gtag('event', 'whatsapp_click', {
+                event_category: 'Footer Links',
+                event_label: 'WhatsApp'
+            })">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
         </div>
     </footer>
     <script src="script.js"></script>
