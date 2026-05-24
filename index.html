@@ -70,13 +70,27 @@
 
     <!-- HERO -->
     <section class="hero">
+        <!-- Animated background gradient -->
+        <div class="hero-gradient"></div>
+
+        <!-- Status badge -->
         <div class="hero-tag">
             <span class="dot"></span>
-            Available for new projects
+            Available for projects now
         </div>
-        <h1>I build websites<br>that turn visitors<br>into <em>customers.</em></h1>
-        <p class="hero-sub">React · JavaScript · UI/UX — Fast, responsive websites for global businesses that actually
-            drive results.</p>
+
+        <!-- Hero headline -->
+        <h1 class="hero-headline">
+            Get a website<br>
+            that actually works<br>
+            for your <em>business.</em>
+        </h1>
+
+        <!-- Subheading -->
+        <p class="hero-sub">I build professional websites for restaurants, salons, event venues, and small businesses
+            worldwide. Fast. Mobile-first. Designed to convert visitors into customers.</p>
+
+        <!-- CTA Buttons -->
         <div class="hero-actions">
             <a href="https://wa.me/2347075255079?text=Hi%20Obaloluwa%2C%20I%20want%20to%20hire%20you%20for%20a%20website"
                 target="_blank" class="btn-primary" onclick="gtag('event', 'hero_whatsapp_click', {
@@ -84,15 +98,32 @@
                     event_label: 'Hero Hire Me WhatsApp'
                 })">
                 <i class="fa-brands fa-whatsapp"></i>
-                Hire Me on WhatsApp
+                <span>Start Your Website</span>
             </a>
-            <a href="#work" class="btn-secondary">See My Work <i class="fa-solid fa-arrow-down"></i></a>
+            <a href="#work" class="btn-secondary">
+                <span>See My Work</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
+
+        <!-- Trust signal -->
+        <div class="hero-trust">
+            <div class="trust-item">
+                <strong>50+</strong> Sites Built
+            </div>
+            <div class="trust-item">
+                <strong>3-Day</strong> Turnaround
+            </div>
+            <div class="trust-item">
+                <strong>24hr</strong> Response
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
         <div class="hero-scroll">
-            <div class="scroll-line"></div>
-            Scroll to explore
+            <div class="scroll-dot"></div>
+            <span>Scroll to explore</span>
         </div>
-        <div class="hero-bg-text">OBA</div>
     </section>
 
     <!-- WORK -->
@@ -203,27 +234,28 @@
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon"><i class="fa-solid fa-store"></i></div>
-                <div class="service-name">Business Landing Page</div>
-                <p class="service-desc">A clean, fast one-page website for your business. Services, gallery, location,
-                    testimonials and WhatsApp CTA. Ready in 3 days.</p>
+                <div class="service-name">Get More Customers Online</div>
+                <p class="service-desc"><strong>3-Day Build</strong> — A professional website that showcases your
+                    business and turns visitors into customers. Includes WhatsApp ordering, photo gallery, testimonials,
+                    and SEO. Ready to convert.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon"><i class="fa-solid fa-bag-shopping"></i></div>
-                <div class="service-name">E-commerce / Menu Site</div>
-                <p class="service-desc">Multi-page site with product or menu listings, pricing, and WhatsApp ordering
-                    integration.</p>
+                <div class="service-name">Sell Online Without Hassle</div>
+                <p class="service-desc">Menu site, product catalog, or online ordering system. Integrated WhatsApp flow
+                    so customers order directly from you. Built for restaurants, cafes, and shops.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                <div class="service-name">Website Redesign</div>
-                <p class="service-desc">Got an outdated website? I'll redesign it from scratch — modern, fast, and
-                    mobile-first.</p>
+                <div class="service-name">Kill Your Outdated Website</div>
+                <p class="service-desc">Old design costing you customers? Redesign complete—modern, fast, mobile-first,
+                    built to convert. Your brand, elevated.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                <div class="service-name">Maintenance &amp; Updates</div>
-                <p class="service-desc">Ongoing support — updating content, fixing bugs, adding new sections as your
-                    business grows.</p>
+                <div class="service-name">Stay Live &amp; Growing</div>
+                <p class="service-desc">Ongoing updates, new features, bug fixes, performance optimization. Your website
+                    evolves as your business grows.</p>
             </div>
         </div>
     </section>
@@ -240,13 +272,13 @@
                 </div>
             </div>
             <div class="about-text">
-                <h2 class="section-title">I'm Obaloluwa —<br>I build for<br><em
-                        style="color:var(--accent);font-style:italic;">businesses worldwide.</em></h2>
-                <p>I'm a web developer focused on helping <strong>small businesses and brands worldwide</strong> get
-                    online properly — not just a page, but a real digital presence that brings in customers.</p>
-                <p>I build with <strong>React, JavaScript, HTML/CSS</strong> — fast, clean, mobile-first. Every site I
-                    build includes a direct WhatsApp flow because that's how customers actually buy.</p>
-                <p><strong>God First.</strong> <i class="fa-solid fa-hands-praying" style="color:var(--accent)"></i></p>
+                <h2 class="section-title">I help small businesses<br>look professional online—and<br>actually <em
+                        style="color:var(--accent);font-style:italic;">get customers.</em></h2>
+                <p>Most small businesses have mediocre websites. Some have none. I fix that.</p>
+                <p>I've built <strong>50+ websites</strong> for restaurants, salons, event venues, and brands across
+                    Nigeria, Ghana, Kenya, and beyond. Each one designed to do one thing: bring customers through the
+                    door. Or through WhatsApp.</p>
+                <p><strong>I don't build portfolios. I build sales tools.</strong></p>
                 <div class="stack-list">
                     <span class="stack-item"><i class="fa-brands fa-react"></i> React</span>
                     <span class="stack-item"><i class="fa-brands fa-js"></i> JavaScript</span>
@@ -255,6 +287,54 @@
                     <span class="stack-item"><i class="fa-brands fa-whatsapp"></i> WhatsApp Integration</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" style="background: var(--bg2);">
+        <p class="section-label">Client Wins</p>
+        <h2 class="section-title">What clients say</h2>
+        <div class="testimonial-grid">
+
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "I had an old website that looked cheap. Obaloluwa rebuilt it in 3 days—it's clean, fast,
+                    mobile-friendly, and I'm getting WhatsApp inquiries now. Best decision I made for my business this
+                    year."
+                </p>
+                <div class="testimonial-author">
+                    <strong>Chioma Nwankwo</strong>
+                    <span>B2 Unisex Salon, Lagos</span>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "We sell catering online now because of the website he built. The WhatsApp integration means
+                    customers go straight from 'yes, I want this' to payment. Revenue increased 35% in 2 months."
+                </p>
+                <div class="testimonial-author">
+                    <strong>Amara Owusu</strong>
+                    <span>Kitchen, Accra</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
