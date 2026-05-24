@@ -42,7 +42,7 @@ body {
     cursor: none;
 }
 
-/* Cursor */
+/* ─── CURSOR ─── */
 .cursor {
     width: 10px;
     height: 10px;
@@ -71,7 +71,19 @@ body {
     transition: width 0.2s, height 0.2s, opacity 0.2s;
 }
 
-/* NAV */
+@media (hover: none) {
+
+    .cursor,
+    .cursor-ring {
+        display: none;
+    }
+
+    body {
+        cursor: auto;
+    }
+}
+
+/* ─── NAV ─── */
 nav {
     position: fixed;
     top: 0;
@@ -125,9 +137,82 @@ nav {
     border-radius: 2rem;
     font-size: 0.82rem !important;
     font-weight: 600 !important;
+    white-space: nowrap;
 }
 
-/* HERO */
+/* Mobile hamburger */
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform 0.25s, opacity 0.25s;
+}
+
+.nav-hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile menu */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 61px;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    z-index: 99;
+    flex-direction: column;
+    padding: 1rem 1.5rem 1.5rem;
+    gap: 1rem;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+.mobile-menu a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text2);
+    text-decoration: none;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu .nav-cta {
+    border-bottom: none !important;
+    text-align: center;
+    padding: 0.75rem 1.2rem;
+    border-radius: 2rem;
+    margin-top: 0.3rem;
+}
+
+/* ─── HERO ─── */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -167,18 +252,18 @@ nav {
     0%,
     100% {
         opacity: 1;
-        transform: scale(1)
+        transform: scale(1);
     }
 
     50% {
         opacity: 0.5;
-        transform: scale(1.4)
+        transform: scale(1.4);
     }
 }
 
 .hero h1 {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(3rem, 8vw, 7rem);
+    font-size: clamp(2.8rem, 7vw, 7rem);
     font-weight: 800;
     line-height: 0.95;
     letter-spacing: -0.03em;
@@ -192,7 +277,7 @@ nav {
 }
 
 .hero-sub {
-    font-size: clamp(1rem, 2vw, 1.15rem);
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
     color: var(--text2);
     font-weight: 300;
     max-width: 500px;
@@ -222,6 +307,7 @@ nav {
     gap: 0.6rem;
     box-shadow: 0 4px 20px rgba(200, 71, 26, 0.3);
     transition: transform 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
 }
 
 .btn-primary:hover {
@@ -240,6 +326,7 @@ nav {
     font-size: 0.95rem;
     text-decoration: none;
     transition: border-color 0.2s, background 0.2s;
+    white-space: nowrap;
 }
 
 .btn-secondary:hover {
@@ -253,7 +340,7 @@ nav {
     top: 50%;
     transform: translateY(-50%);
     font-family: 'Syne', sans-serif;
-    font-size: clamp(10rem, 22vw, 20rem);
+    font-size: clamp(8rem, 20vw, 20rem);
     font-weight: 800;
     color: var(--border);
     opacity: 0.35;
@@ -296,27 +383,27 @@ nav {
 
 @keyframes scrollLine {
     0% {
-        left: -100%
+        left: -100%;
     }
 
     100% {
-        left: 100%
+        left: 100%;
     }
 }
 
 @keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(24px)
+        transform: translateY(24px);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0)
+        transform: translateY(0);
     }
 }
 
-/* SECTION COMMON */
+/* ─── SECTIONS ─── */
 section {
     padding: 6rem 2.5rem;
 }
@@ -332,7 +419,7 @@ section {
 
 .section-title {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(1.9rem, 4.5vw, 3.5rem);
     font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1.05;
@@ -348,7 +435,7 @@ section {
     margin-bottom: 3.5rem;
 }
 
-/* WORK */
+/* ─── WORK ─── */
 #work {
     background: var(--bg2);
 }
@@ -378,6 +465,7 @@ section {
     order: -1;
 }
 
+/* ── PREVIEW BOX ── */
 .project-preview {
     border-radius: 16px;
     overflow: hidden;
@@ -387,37 +475,53 @@ section {
     aspect-ratio: 16/10;
 }
 
-.project-preview iframe {
+/*
+ * .iframe-scaler sits inside .project-preview and is what we translateY
+ * to simulate scrolling. It's 2× the width and height of the container,
+ * then scaled down 0.5× so it visually fills the box exactly.
+ * Moving it via translateY shifts the rendered website content — not the element boundary.
+ */
+.iframe-scaler {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 200%;
     height: 200%;
-    transform: scale(0.5);
+    transform: scale(0.5) translateY(0px);
     transform-origin: top left;
-    border: none;
-    pointer-events: none;
+    will-change: transform;
 }
 
+.iframe-scaler iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none;
+    display: block;
+}
+
+/* overlay blocks accidental clicks while not hiding scroll buttons */
 .project-preview-overlay {
     position: absolute;
     inset: 0;
-    background: transparent;
+    z-index: 2;
 }
 
-.project-preview:hover .preview-btn {
-    opacity: 1;
-}
 
+
+/* Visit Site button */
 .preview-btn {
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 10px;
+    right: 10px;
     background: var(--accent);
     color: #fff;
     border: none;
     border-radius: 2rem;
-    padding: 0.5rem 1.1rem;
+    padding: 0.45rem 1rem;
     font-family: 'Syne', sans-serif;
     font-weight: 600;
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     display: flex;
     align-items: center;
     gap: 0.4rem;
@@ -425,36 +529,14 @@ section {
     opacity: 0;
     transition: opacity 0.2s;
     text-decoration: none;
-}
-
-.scroll-btn {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    background: var(--accent);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.2s;
-    font-size: 1rem;
     z-index: 10;
 }
 
-.project-preview:hover .scroll-btn {
+.project-preview:hover .preview-btn {
     opacity: 1;
 }
 
-.scroll-btn:hover {
-    box-shadow: 0 4px 12px rgba(200, 71, 26, 0.4);
-}
-
+/* ── PROJECT INFO ── */
 .project-info {
     display: flex;
     flex-direction: column;
@@ -482,7 +564,7 @@ section {
 
 .project-name {
     font-family: 'Syne', sans-serif;
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
     font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1.1;
@@ -530,10 +612,10 @@ section {
     gap: 0.8rem;
 }
 
-/* SERVICES */
+/* ─── SERVICES ─── */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 1.5rem;
 }
 
@@ -570,7 +652,7 @@ section {
     font-weight: 300;
 }
 
-/* ABOUT */
+/* ─── ABOUT ─── */
 #about {
     background: var(--bg2);
 }
@@ -664,7 +746,7 @@ section {
     font-size: 0.75rem;
 }
 
-/* CTA */
+/* ─── CTA ─── */
 .cta-section {
     text-align: center;
     padding: 7rem 2.5rem;
@@ -674,7 +756,7 @@ section {
 
 .cta-big {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(2.5rem, 7vw, 6rem);
+    font-size: clamp(2.2rem, 7vw, 6rem);
     font-weight: 800;
     letter-spacing: -0.04em;
     line-height: 1;
@@ -695,7 +777,7 @@ section {
     line-height: 1.7;
 }
 
-/* FOOTER */
+/* ─── FOOTER ─── */
 footer {
     background: var(--bg);
     border-top: 1px solid var(--border);
@@ -727,47 +809,307 @@ footer p {
     color: var(--accent);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* ═══════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ═══════════════════════════════ */
+
+/* ── Large tablets / small laptops (≤1024px) ── */
+@media (max-width: 1024px) {
     nav {
-        padding: 1rem 1.2rem;
+        padding: 1.1rem 2rem;
+    }
+
+    .hero {
+        padding: 7.5rem 2rem 5rem;
+    }
+
+    section {
+        padding: 5rem 2rem;
+    }
+
+    .project-item {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 3rem;
+    }
+
+    .hero-bg-text {
+        font-size: clamp(7rem, 16vw, 14rem);
+        opacity: 0.25;
+    }
+}
+
+/* ── Tablets (≤768px) ── */
+@media (max-width: 768px) {
+
+    /* Nav */
+    nav {
+        padding: 1rem 1.25rem;
     }
 
     .nav-links {
         display: none;
     }
 
-    .hero {
-        padding: 7rem 1.2rem 4rem;
+    .nav-hamburger {
+        display: flex;
     }
 
-    section {
-        padding: 4rem 1.2rem;
+    body {
+        cursor: auto;
+    }
+
+    .cursor,
+    .cursor-ring {
+        display: none;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 6.5rem 1.25rem 4rem;
+        min-height: 100svh;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+
+    .hero-sub {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+        gap: 0.75rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.88rem;
     }
 
     .hero-bg-text {
         display: none;
     }
 
+    .hero-scroll {
+        left: 1.25rem;
+        bottom: 2rem;
+    }
+
+    /* Sections */
+    section {
+        padding: 4rem 1.25rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.75rem, 7vw, 2.5rem);
+    }
+
+    .section-sub {
+        font-size: 0.95rem;
+        margin-bottom: 2.5rem;
+    }
+
+    /* Projects — stack on mobile */
+    .projects-list {
+        gap: 3.5rem;
+    }
+
     .project-item {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.75rem;
     }
 
     .project-item:nth-child(even) .project-preview {
         order: 0;
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+    /* Show scroll buttons always on touch (no hover) */
+    .scroll-up-btn,
+    .scroll-down-btn {
+        opacity: 0.85;
     }
 
+    .preview-btn {
+        opacity: 0.9;
+    }
+
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .about-img-box {
+        aspect-ratio: 1/1;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .about-badge {
+        bottom: 0.5rem;
+        right: 0.5rem;
+    }
+
+    /* CTA */
     .cta-section {
-        padding: 4rem 1.2rem;
+        padding: 4.5rem 1.25rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.5rem 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+}
+
+/* ── Mobile L (≤480px) ── */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: clamp(2.2rem, 11vw, 3.2rem);
+        line-height: 1;
+    }
+
+    .hero-tag {
+        font-size: 0.73rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.65rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .project-preview {
+        aspect-ratio: 16/11;
+    }
+
+    .project-name {
+        font-size: 1.4rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .about-img-box {
+        aspect-ratio: 1;
+        max-width: 260px;
+    }
+
+    .cta-big {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .cta-sub {
+        font-size: 0.92rem;
+    }
+
+    .cta-section .btn-primary {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
+}
+
+/* ── Mobile S (≤375px) ── */
+@media (max-width: 375px) {
+    nav {
+        padding: 0.9rem 1rem;
+    }
+
+    .hero {
+        padding: 6rem 1rem 3.5rem;
+    }
+
+    section {
+        padding: 3.5rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 12vw, 2.8rem);
     }
 
     footer {
-        padding: 1.5rem 1.2rem;
+        padding: 1.25rem 1rem;
+    }
+}
+
+/* ── Very small phones (≤320px) ── */
+@media (max-width: 320px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        font-size: 0.82rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .project-name {
+        font-size: 1.25rem;
+    }
+}
+
+/* ── Large desktops (≥1400px) ── */
+@media (min-width: 1400px) {
+    nav {
+        padding: 1.3rem 4rem;
+    }
+
+    .hero {
+        padding: 9rem 4rem 6rem;
+    }
+
+    section {
+        padding: 7rem 4rem;
+    }
+
+    footer {
+        padding: 2rem 4rem;
+    }
+
+    .cta-section {
+        padding: 8rem 4rem;
+    }
+
+    .project-item {
+        gap: 5rem;
+    }
+}
+
+/* ── Ultra-wide (≥1800px) ── */
+@media (min-width: 1800px) {
+
+    nav,
+    section,
+    .cta-section,
+    footer {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    .hero {
+        padding-left: 6rem;
+        padding-right: 6rem;
     }
 }

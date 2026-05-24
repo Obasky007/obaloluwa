@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Obaloluwa Ademuyiwa — Web Developer</title>
+    <title>Obaloluwa Ademuyiwa - Web Developer</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -24,10 +24,24 @@
             <li><a href="#work">Work</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="https://wa.me/2347075255079?text=Hi%20Obaloluwa%2C%20I%20want%20to%20hire%20you%20for%20a%20website"
-                    target="_blank" class="nav-cta">Hire Me <i class="fa-brands fa-whatsapp"></i></a></li>
+            <li>
+                <a href="https://wa.me/2347075255079?text=Hi%20Obaloluwa%2C%20I%20want%20to%20hire%20you%20for%20a%20website"
+                    target="_blank" class="nav-cta">Hire Me <i class="fa-brands fa-whatsapp"></i></a>
+            </li>
         </ul>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#work" class="mobile-link">Work</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="https://wa.me/2347075255079?text=Hi%20Obaloluwa%2C%20I%20want%20to%20hire%20you%20for%20a%20website"
+            target="_blank" class="nav-cta">Hire Me <i class="fa-brands fa-whatsapp"></i></a>
+    </div>
 
     <!-- HERO -->
     <section class="hero">
@@ -64,11 +78,11 @@
             <!-- Project 1 -->
             <div class="project-item">
                 <div class="project-preview">
-                    <iframe src="https://amalatohsure.vercel.app" scrolling="no" tabindex="-1"></iframe>
+                    <div class="iframe-scaler">
+                        <iframe src="https://amalatohsure.vercel.app" scrolling="no" tabindex="-1"
+                            title="Amalatohsure Kitchen preview"></iframe>
+                    </div>
                     <div class="project-preview-overlay"></div>
-                    <button class="scroll-btn" title="Scroll preview">
-                        <i class="fa-solid fa-arrow-down"></i>
-                    </button>
                     <a href="https://amalatohsure.vercel.app" target="_blank" class="preview-btn">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Site
                     </a>
@@ -77,8 +91,8 @@
                     <span class="project-num">01</span>
                     <span class="project-type-badge">Food &amp; Catering</span>
                     <h3 class="project-name">Amalatohsure Kitchen</h3>
-                    <p class="project-desc">Full website for a traditional food brand with 300K+ Instagram
-                        followers. Includes menu, event catering, training section and WhatsApp ordering flow.</p>
+                    <p class="project-desc">Full website for a traditional food brand with 300K+ Instagram followers.
+                        Includes menu, event catering, training section and WhatsApp ordering flow.</p>
                     <div class="project-tags">
                         <span class="tag">React</span>
                         <span class="tag">WhatsApp Integration</span>
@@ -93,11 +107,11 @@
             <!-- Project 2 -->
             <div class="project-item">
                 <div class="project-preview">
-                    <iframe src="https://b2-unisexsalon.vercel.app" scrolling="no" tabindex="-1"></iframe>
+                    <div class="iframe-scaler">
+                        <iframe src="https://b2-unisexsalon.vercel.app" scrolling="no" tabindex="-1"
+                            title="B2 Salon preview"></iframe>
+                    </div>
                     <div class="project-preview-overlay"></div>
-                    <button class="scroll-btn" title="Scroll preview">
-                        <i class="fa-solid fa-arrow-down"></i>
-                    </button>
                     <a href="https://b2-unisexsalon.vercel.app" target="_blank" class="preview-btn">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Site
                     </a>
@@ -106,8 +120,8 @@
                     <span class="project-num">02</span>
                     <span class="project-type-badge">Beauty &amp; Wellness</span>
                     <h3 class="project-name">B2 Unisex Salon</h3>
-                    <p class="project-desc">Premium salon website for a beauty brand. Features service
-                        listings, gallery, testimonials, Google Maps and direct WhatsApp booking.</p>
+                    <p class="project-desc">Premium salon website for a beauty brand. Features service listings,
+                        gallery, testimonials, Google Maps and direct WhatsApp booking.</p>
                     <div class="project-tags">
                         <span class="tag">HTML/CSS</span>
                         <span class="tag">Google Maps</span>
@@ -122,11 +136,11 @@
             <!-- Project 3 -->
             <div class="project-item">
                 <div class="project-preview">
-                    <iframe src="https://sunlightroyaleventscentre.vercel.app" scrolling="no" tabindex="-1"></iframe>
+                    <div class="iframe-scaler">
+                        <iframe src="https://sunlightroyaleventscentre.vercel.app" scrolling="no" tabindex="-1"
+                            title="Sunlight Events Centre preview"></iframe>
+                    </div>
                     <div class="project-preview-overlay"></div>
-                    <button class="scroll-btn" title="Scroll preview">
-                        <i class="fa-solid fa-arrow-down"></i>
-                    </button>
                     <a href="https://sunlightroyaleventscentre.vercel.app" target="_blank" class="preview-btn">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Site
                     </a>
@@ -135,8 +149,8 @@
                     <span class="project-num">03</span>
                     <span class="project-type-badge">Events &amp; Hospitality</span>
                     <h3 class="project-name">Sunlight Royal Events Centre</h3>
-                    <p class="project-desc">Elegant venue website for a premier event centre. Venue features,
-                        gallery, enquiry form, location map and WhatsApp availability checker.</p>
+                    <p class="project-desc">Elegant venue website for a premier event centre. Venue features, gallery,
+                        enquiry form, location map and WhatsApp availability checker.</p>
                     <div class="project-tags">
                         <span class="tag">HTML/CSS</span>
                         <span class="tag">SEO Optimised</span>
@@ -178,7 +192,7 @@
             </div>
             <div class="service-card">
                 <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                <div class="service-name">Maintenance & Updates</div>
+                <div class="service-name">Maintenance &amp; Updates</div>
                 <p class="service-desc">Ongoing support — updating content, fixing bugs, adding new sections as your
                     business grows.</p>
             </div>
@@ -190,7 +204,7 @@
         <p class="section-label">About Me</p>
         <div class="about-grid">
             <div class="about-img-box">
-                <i class="fa-solid fa-user-tie"></i>
+                <img src="profile.png" alt="Obaloluwa Ademuyiwa" class="about-image">
                 <div class="about-badge">
                     <i class="fa-solid fa-location-dot"></i>
                     Globally<br>Available
@@ -207,7 +221,7 @@
                 <div class="stack-list">
                     <span class="stack-item"><i class="fa-brands fa-react"></i> React</span>
                     <span class="stack-item"><i class="fa-brands fa-js"></i> JavaScript</span>
-                    <span class="stack-item"><i class="fa-brands fa-html5"></i> HTML & CSS</span>
+                    <span class="stack-item"><i class="fa-brands fa-html5"></i> HTML &amp; CSS</span>
                     <span class="stack-item"><i class="fa-solid fa-pen-ruler"></i> UI/UX</span>
                     <span class="stack-item"><i class="fa-brands fa-whatsapp"></i> WhatsApp Integration</span>
                 </div>
@@ -234,11 +248,13 @@
             <a href="mailto:obaloluwawebdesign@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
             <a href="https://instagram.com/obaloluwa.dev" target="_blank" title="Instagram"><i
                     class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/Obasky007" target="_blank" title="Github"><i
+                    class="fa-brands fa-github"></i></a>
+            <a href="https://x.com/dev_o_b_a" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
             <a href="https://wa.me/2347075255079" target="_blank" title="WhatsApp"><i
                     class="fa-brands fa-whatsapp"></i></a>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 
