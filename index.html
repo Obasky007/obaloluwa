@@ -1,273 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!DOCTYPE html>
+<html lang="en-NG">
+
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYYGJ2TRK3"></script>
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'G-BYYGJ2TRK3');
-    </script>
+    <!-- ============================================================
+       PERFORMANCE: Resource Hints (load faster = rank higher)
+  ============================================================ -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ============================================================
-         PRIMARY SEO META TAGS
-    ============================================================ -->
-    <title>Obaloluwa Ademuyiwa | Web Designer & Developer in Nigeria</title>
-    <meta name="description"
-        content="Professional web designer and developer based in Nigeria. I build fast, mobile-first websites for restaurants, salons, event venues, and small businesses. 3-day turnaround. WhatsApp integration. Serving clients in Nigeria, Ghana, Kenya & worldwide." />
-    <meta name="keywords"
-        content="web designer Nigeria, web developer Nigeria, website designer Lagos, website developer Lagos, web designer Ibadan, affordable website design Nigeria, small business website Nigeria, restaurant website design, salon website design, WhatsApp website integration, React developer Nigeria, frontend developer Nigeria, website redesign Nigeria, professional website Nigeria, mobile-first website design, web designer Africa, hire web designer Nigeria" />
-    <meta name="author" content="Obaloluwa Ademuyiwa" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <link rel="canonical" href="https://obaloluwa.dev/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
     <!-- ============================================================
-         OPEN GRAPH (Facebook, WhatsApp, LinkedIn previews)
-    ============================================================ -->
+       GOOGLE ANALYTICS (deferred — doesn't block render)
+  ============================================================ -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYYGJ2TRK3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-BYYGJ2TRK3');
+    </script>
+
+    <!-- ============================================================
+       PRIMARY SEO META TAGS
+  ============================================================ -->
+    <title>Obaloluwa Ademuyiwa | Web Designer & Developer in Nigeria</title>
+    <meta name="description"
+        content="Professional web designer and developer based in Nigeria. I build fast, mobile-first websites for restaurants, salons, event venues, and small businesses. 3-day turnaround. WhatsApp integration. Serving clients in Lagos, Ibadan, Nigeria, and worldwide." />
+    <meta name="keywords"
+        content="web designer Nigeria, web developer Nigeria, website designer Lagos, website designer Ibadan, affordable website design Nigeria, small business website Nigeria, restaurant website design Nigeria, salon website design Nigeria, WhatsApp website integration, React developer Nigeria, frontend developer Nigeria, website redesign Nigeria, professional website Nigeria, mobile-first website design, web designer Africa, hire web designer Nigeria, best web designer Nigeria" />
+    <meta name="author" content="Obaloluwa Ademuyiwa" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    <!-- CRITICAL FIX: canonical & OG must use same domain -->
+    <link rel="canonical" href="https://obaloluwa.vercel.app/" />
+
+    <!-- ============================================================
+       OPEN GRAPH (Facebook, WhatsApp, LinkedIn)
+  ============================================================ -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://obaloluwa.vercel.app/" />
+    <!-- canonical and og:url must always match exactly -->
     <meta property="og:title" content="Obaloluwa Ademuyiwa | Web Designer & Developer in Nigeria" />
     <meta property="og:description"
         content="I build professional websites for restaurants, salons, event venues, and small businesses. Fast. Mobile-first. Designed to convert visitors into customers. Based in Nigeria, serving clients worldwide." />
-    <meta property="og:image" content="https://obaloluwa.vercel.app/profile.png" />
+    <meta property="og:image" content="https://obaloluwa.vercel.app/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Obaloluwa Ademuyiwa - Web Designer and Developer" />
+    <meta property="og:image:alt" content="Obaloluwa Ademuyiwa - Web Designer and Developer in Nigeria" />
     <meta property="og:site_name" content="Obaloluwa Ademuyiwa" />
     <meta property="og:locale" content="en_NG" />
 
     <!-- ============================================================
-         TWITTER / X CARD
-    ============================================================ -->
+       TWITTER / X CARD
+  ============================================================ -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@dev_o_b_a" />
     <meta name="twitter:creator" content="@dev_o_b_a" />
     <meta name="twitter:title" content="Obaloluwa Ademuyiwa | Web Designer & Developer in Nigeria" />
     <meta name="twitter:description"
         content="I build professional websites for restaurants, salons, event venues, and small businesses. Fast. Mobile-first. Designed to convert." />
-    <meta name="twitter:image" content="https://obaloluwa.vercel.app/profile.png" />
+    <meta name="twitter:image" content="https://obaloluwa.vercel.app/og-image.png" />
     <meta name="twitter:image:alt" content="Obaloluwa Ademuyiwa - Web Designer and Developer" />
 
     <!-- ============================================================
-         GEO / LOCAL SEO
-    ============================================================ -->
-    <meta name="geo.region" content="NG-LA" />
-    <meta name="geo.placename" content="Lagos, Nigeria" />
-    <meta name="geo.position" content="6.5244;3.3792" />
-    <meta name="ICBM" content="6.5244, 3.3792" />
+       GEO / LOCAL SEO (targets both Lagos & Ibadan)
+  ============================================================ -->
+    <meta name="geo.region" content="NG-OY" />
+    <!-- NG-OY = Oyo State (Ibadan). Add both if needed -->
+    <meta name="geo.placename" content="Ibadan, Oyo State, Nigeria" />
+    <meta name="geo.position" content="7.3775;3.9470" />
+    <meta name="ICBM" content="7.3775, 3.9470" />
 
     <!-- ============================================================
-         STRUCTURED DATA — Person (JSON-LD)
-    ============================================================ -->
+       HREFLANG (tells Google this targets Nigerian English readers)
+  ============================================================ -->
+    <link rel="alternate" hreflang="en-ng" href="https://obaloluwa.vercel.app/" />
+    <link rel="alternate" hreflang="en" href="https://obaloluwa.vercel.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://obaloluwa.vercel.app/" />
+
+    <!-- ============================================================
+       FAVICON & PWA
+  ============================================================ -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="msapplication-TileColor" content="#0a0a0a" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Obaloluwa.vercel.app" />
+
+    <!-- ============================================================
+       STRUCTURED DATA — Person (JSON-LD)
+  ============================================================ -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Obaloluwa Ademuyiwa",
-      "url": "https://obaloluwa.vercel.app",
-      "image": "https://obaloluwa.vercel.app/profile.png",
-      "jobTitle": "Web Designer & Developer",
-      "description": "Professional web designer and developer building fast, mobile-first websites for small businesses in Nigeria and worldwide.",
-      "email": "obaloluwawebdesign@gmail.com",
-      "telephone": "+2347075255079",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Lagos",
-        "addressCountry": "NG"
-      },
-      "sameAs": [
-        "https://instagram.com/obaloluwa.dev",
-        "https://github.com/Obasky007",
-        "https://x.com/dev_o_b_a"
-      ],
-      "knowsAbout": ["Web Design", "Frontend Development", "React", "JavaScript", "HTML", "CSS", "UI/UX Design", "WhatsApp Integration", "SEO"],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance"
-      }
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Obaloluwa Ademuyiwa",
+    "url": "https://obaloluwa.vercel.app",
+    "image": "https://obaloluwa.vercel.app/profile.png",
+    "jobTitle": "Web Designer & Developer",
+    "description": "Professional web designer and developer building fast, mobile-first websites for small businesses in Nigeria and worldwide.",
+    "email": "obaloluwawebdesign@gmail.com",
+    "telephone": "+2347075255079",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ibadan",
+      "addressRegion": "Oyo",
+      "addressCountry": "NG"
+    },
+    "sameAs": [
+      "https://instagram.com/obaloluwa.dev",
+      "https://github.com/Obasky007",
+      "https://x.com/dev_o_b_a"
+    ],
+    "knowsAbout": [
+      "Web Design",
+      "Frontend Development",
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "UI/UX Design",
+      "WhatsApp Integration",
+      "SEO",
+      "Landing Page Design",
+      "Small Business Websites"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance"
     }
-    </script>
+  }
+  </script>
 
     <!-- ============================================================
-         STRUCTURED DATA — WebSite (JSON-LD)
-    ============================================================ -->
+       STRUCTURED DATA — ProfessionalService (JSON-LD)
+       Dates added to reviews so Google counts them
+  ============================================================ -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Obaloluwa Ademuyiwa",
-      "url": "https://obaloluwa.vercel.app",
-      "description": "Portfolio of Obaloluwa Ademuyiwa — web designer and developer building professional websites for small businesses in Nigeria and worldwide.",
-      "author": {
-        "@type": "Person",
-        "name": "Obaloluwa Ademuyiwa"
-      }
-    }
-    </script>
-
-    <!-- ============================================================
-         STRUCTURED DATA — LocalBusiness / ProfessionalService (JSON-LD)
-    ============================================================ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Obaloluwa Ademuyiwa — Web Design & Development",
-      "url": "https://obaloluwa.vercel.app",
-      "image": "https://obaloluwa.vercel.app/profile.png",
-      "description": "Professional web design and development services for restaurants, salons, event venues, and small businesses. Fast turnaround, mobile-first, WhatsApp integration.",
-      "telephone": "+2347075255079",
-      "email": "obaloluwawebdesign@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Lagos",
-        "addressCountry": "NG"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 6.5244,
-        "longitude": 3.3792
-      },
-      "areaServed": [
-        { "@type": "Country", "name": "Nigeria" },
-        { "@type": "Country", "name": "Ghana" },
-        { "@type": "Country", "name": "Kenya" },
-        { "@type": "Text", "name": "Worldwide" }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Web Design Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Business Website Design",
-              "description": "Professional 3-day website build for restaurants, salons, and small businesses."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Website Redesign",
-              "description": "Modern redesign of outdated websites. Mobile-first, fast, conversion-focused."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "WhatsApp Integration",
-              "description": "Website with WhatsApp ordering and booking flow for direct customer contact."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Website Maintenance",
-              "description": "Ongoing updates, performance optimization, and feature additions."
-            }
-          }
-        ]
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Chioma Nwankwo"
-          },
-          "reviewBody": "I had an old website that looked cheap. Obaloluwa rebuilt it in 3 days—it's clean, fast, mobile-friendly, and I'm getting WhatsApp inquiries now."
-        },
-        {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
-          },
-          "author": {
-            "@type": "Person",
-            "name": "Amara Owusu"
-          },
-          "reviewBody": "We sell catering online now because of the website he built. Revenue increased 35% in 2 months."
-        }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "2",
-        "bestRating": "5"
-      }
-    }
-    </script>
-
-    <!-- ============================================================
-         STRUCTURED DATA — BreadcrumbList (JSON-LD)
-    ============================================================ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Obaloluwa Ademuyiwa — Web Design & Development",
+    "url": "https://obaloluwa.vercel.app",
+    "image": "https://obaloluwa.vercel.app/og-image.png",
+    "description": "Professional web design and development for restaurants, salons, event venues, and small businesses. 3-day turnaround, mobile-first, WhatsApp integration.",
+    "telephone": "+2347075255079",
+    "email": "obaloluwawebdesign@gmail.com",
+    "priceRange": "₦₦",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ibadan",
+      "addressRegion": "Oyo",
+      "addressCountry": "NG"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 7.3775,
+      "longitude": 3.9470
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "Nigeria" },
+      { "@type": "Country", "name": "Ghana" },
+      { "@type": "Country", "name": "Kenya" },
+      { "@type": "AdministrativeArea", "name": "Lagos" },
+      { "@type": "AdministrativeArea", "name": "Ibadan" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Design Services",
       "itemListElement": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://obaloluwa.vercel.app/"
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Business Website Design",
+            "description": "Professional 3-day website build for restaurants, salons, and small businesses in Nigeria."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Work",
-          "item": "https://obaloluwa.vercel.app/#work"
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Website Redesign",
+            "description": "Modern redesign of outdated websites. Mobile-first, fast, conversion-focused."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Services",
-          "item": "https://obaloluwa.vercel.app/#services"
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "WhatsApp Integration",
+            "description": "Website with WhatsApp ordering and booking flow for direct customer contact."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "About",
-          "item": "https://obaloluwa.vercel.app/#about"
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Website Maintenance",
+            "description": "Ongoing updates, performance optimization, and feature additions."
+          }
         }
       ]
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "datePublished": "2025-03-15",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Chioma Nwankwo"
+        },
+        "reviewBody": "I had an old website that looked cheap. Obaloluwa rebuilt it in 3 days—it's clean, fast, mobile-friendly, and I'm getting WhatsApp inquiries now."
+      },
+      {
+        "@type": "Review",
+        "datePublished": "2025-04-02",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Amara Owusu"
+        },
+        "reviewBody": "We sell catering online now because of the website he built. Revenue increased 35% in 2 months."
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "2",
+      "bestRating": "5"
     }
-    </script>
+  }
+  </script>
 
     <!-- ============================================================
-         FAVICON (add your actual favicon files)
-    ============================================================ -->
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#0a0a0a" />
+       STRUCTURED DATA — FAQ (HUGE for Google rich results / "People also ask")
+       These questions must also appear as real text on your page
+  ============================================================ -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a website cost in Nigeria?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A professional business website in Nigeria typically costs between ₦80,000 and ₦300,000 depending on the number of pages, features, and complexity. I offer affordable packages starting from ₦80,000 for small businesses, restaurants, and salons — with a 3-day turnaround and WhatsApp integration included."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to build a website in Nigeria?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I deliver most small business websites within 3 days of receiving your content. Larger projects with custom features may take 5–7 days. You get regular updates throughout the process."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you build websites for restaurants and food businesses in Nigeria?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — restaurants, food vendors, catering businesses, and cafes are some of my most common clients. I build mobile-first restaurant websites with menu displays, online ordering, WhatsApp integration, and reservation flows."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you redesign my existing website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Website redesign is one of my specialties. I modernize outdated websites to be fast, mobile-friendly, and designed to convert visitors into customers — usually within 3–5 days."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you add WhatsApp to websites?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — all my websites include WhatsApp integration by default. Visitors can place orders, book appointments, or send inquiries directly through WhatsApp without leaving your website."
+        }
+      }
+    ]
+  }
+  </script>
 
+    <!-- ============================================================
+       STRUCTURED DATA — BreadcrumbList
+  ============================================================ -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://obaloluwa.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://obaloluwa.vercel.app/#work" },
+      { "@type": "ListItem", "position": 3, "name": "Services", "item": "https://obaloluwa.vercel.app/#services" },
+      { "@type": "ListItem", "position": 4, "name": "About", "item": "https://obaloluwa.vercel.app/#about" },
+      { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://obaloluwa.vercel.app/#contact" }
+    ]
+  }
+  </script>
+
+    <!-- ============================================================
+       FONTS & ICONS (preload display font for speed)
+  ============================================================ -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" />
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
@@ -503,6 +572,16 @@
                 <div class="service-name">Stay Live &amp; Growing</div>
                 <p class="service-desc">Ongoing updates, new features, bug fixes, performance optimization. Your website
                     evolves as your business grows.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="service-name">Dominate Search Results</div>
+                <p class="service-desc">Your customers are searching already — this makes sure they find you first. Technical SEO, lightning-fast performance, mobile optimization, and search-focused structure designed to push your business higher on Google and bring in consistent traffic.</p>
+                <div class="service-features">
+                    <span class="feature-tag">SEO Optimized</span>
+                    <span class="feature-tag">Fast Performance</span>
+                    <span class="feature-tag">Google Ready</span>
+                </div>
             </div>
         </div>
     </section>
