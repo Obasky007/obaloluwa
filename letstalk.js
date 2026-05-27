@@ -127,7 +127,7 @@ function submitWA() {
     const desc = document.getElementById('projectDesc').value.trim() || 'No additional details.';
     const addons = state.addons.length ? state.addons.join(', ') : 'None';
     const msg = encodeURIComponent(
-        `Hi Obaloluwa! I'd like a quote for my project.\n\n` +
+        `Hi Obaloluwa! I'd like to hire you for my project.\n\n` +
         `Service: ${state.serviceOption}\n` +
         `Add-ons: ${addons}\n` +
         `Timeline: ${state.timeline}\n` +
