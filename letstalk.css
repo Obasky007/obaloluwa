@@ -903,4 +903,16 @@
         .timeline-grid {
             grid-template-columns: 1fr 1fr;
         }
+
+        .progress-step {
+            min-width: 100%;
+        }
+
+        .step-text strong {
+            font-size: 0.9rem;
+        }
+
+        .step-text span {
+            font-size: 0.7rem;
+        }
     }

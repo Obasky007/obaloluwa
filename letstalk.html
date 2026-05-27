@@ -59,95 +59,25 @@
         <div class="progress-bar">
             <div class="progress-step" id="ps1" onclick="goStep(1)">
                 <div class="step-num active" id="sn1">1</div>
-                <div class="step-text"><strong>Service Type</strong><span>Pick a category</span></div>
+                <div class="step-text"><strong>Choose Service</strong><span>Pick your project offering</span></div>
             </div>
             <div class="progress-line" id="pl1"></div>
             <div class="progress-step locked" id="ps2" onclick="goStep(2)">
                 <div class="step-num" id="sn2">2</div>
-                <div class="step-text"><strong>Choose Service</strong><span>Specific offering</span></div>
+                <div class="step-text"><strong>Extras & Timeline</strong><span>Add-ons and speed</span></div>
             </div>
             <div class="progress-line" id="pl2"></div>
             <div class="progress-step locked" id="ps3" onclick="goStep(3)">
                 <div class="step-num" id="sn3">3</div>
-                <div class="step-text"><strong>Extras & Timeline</strong><span>Add-ons & budget</span></div>
-            </div>
-            <div class="progress-line" id="pl3"></div>
-            <div class="progress-step locked" id="ps4" onclick="goStep(4)">
-                <div class="step-num" id="sn4">4</div>
-                <div class="step-text"><strong>Your Details</strong><span>Submit & confirm</span></div>
+                <div class="step-text"><strong>Your Details</strong><span>Contact & final review</span></div>
             </div>
         </div>
 
         <!-- WIZARD -->
         <div class="wizard-card">
 
-            <!-- STEP 1 -->
-            <div class="step-panel active" id="step-1">
-                <div class="panel-body">
-                    <div class="step-header">
-                        <div class="step-icon"><i class="fa-solid fa-layer-group"></i></div>
-                        <div class="step-header-text">
-                            <strong>What type of service do you need?</strong>
-                            <span>Select the category that matches your project</span>
-                        </div>
-                    </div>
-                    <div class="grid-3" id="serviceTypes">
-                        <div class="service-card selected" data-value="Business Websites">
-                            <i class="fa-solid fa-briefcase"></i>
-                            <strong>Business Websites</strong>
-                            <span>Professional sites for small businesses</span>
-                        </div>
-                        <div class="service-card" data-value="Landing Pages">
-                            <i class="fa-solid fa-flag"></i>
-                            <strong>Landing Pages</strong>
-                            <span>High-converting campaign pages</span>
-                        </div>
-                        <div class="service-card" data-value="Restaurant & Food Websites">
-                            <i class="fa-solid fa-utensils"></i>
-                            <strong>Restaurant & Food Websites</strong>
-                            <span>Menus, online ordering & menu highlights</span>
-                        </div>
-                        <div class="service-card" data-value="Salon & Beauty Websites">
-                            <i class="fa-solid fa-scissors"></i>
-                            <strong>Salon & Beauty Websites</strong>
-                            <span>Bookings, galleries & service menus</span>
-                        </div>
-                        <div class="service-card" data-value="Event & Venue Websites">
-                            <i class="fa-solid fa-calendar-day"></i>
-                            <strong>Event & Venue Websites</strong>
-                            <span>Event listings, bookings & venue showcase</span>
-                        </div>
-                        <div class="service-card" data-value="Portfolio Websites">
-                            <i class="fa-solid fa-image"></i>
-                            <strong>Portfolio Websites</strong>
-                            <span>Showcase work for creatives & professionals</span>
-                        </div>
-                        <div class="service-card" data-value="Website Redesign">
-                            <i class="fa-solid fa-redo"></i>
-                            <strong>Website Redesign</strong>
-                            <span>Refresh look, speed and conversion</span>
-                        </div>
-                        <div class="service-card" data-value="SEO Optimization">
-                            <i class="fa-solid fa-search"></i>
-                            <strong>SEO Optimization</strong>
-                            <span>Improve visibility & organic traffic</span>
-                        </div>
-                        <div class="service-card" data-value="Website Maintenance">
-                            <i class="fa-solid fa-wrench"></i>
-                            <strong>Website Maintenance</strong>
-                            <span>Ongoing updates and security</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="actions">
-                    <span></span>
-                    <button class="btn-primary" onclick="goStep(2)">Continue <i
-                            class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
 
-            <!-- STEP 2 -->
-            <div class="step-panel" id="step-2">
+            <div class="step-panel active" id="step-1">
                 <div class="panel-body">
                     <div class="step-header">
                         <div class="step-icon"><i class="fa-solid fa-list-check"></i></div>
@@ -213,15 +143,14 @@
                     </div>
                 </div>
                 <div class="actions">
-                    <button class="btn-secondary" onclick="goStep(1)"><i class="fa-solid fa-arrow-left"></i>
-                        Back</button>
-                    <button class="btn-primary" onclick="goStep(3)">Continue <i
+                    <span></span>
+                    <button class="btn-primary" onclick="goStep(2)">Continue <i
                             class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
-            <!-- STEP 3 -->
-            <div class="step-panel" id="step-3">
+            <!-- STEP 2 -->
+            <div class="step-panel" id="step-2">
                 <div class="panel-body">
                     <div class="step-header">
                         <div class="step-icon"><i class="fa-solid fa-sliders"></i></div>
@@ -285,15 +214,15 @@
                     </div>
                 </div>
                 <div class="actions">
-                    <button class="btn-secondary" onclick="goStep(2)"><i class="fa-solid fa-arrow-left"></i>
+                    <button class="btn-secondary" onclick="goStep(1)"><i class="fa-solid fa-arrow-left"></i>
                         Back</button>
-                    <button class="btn-primary" onclick="goStep(4)">Continue <i
+                    <button class="btn-primary" onclick="goStep(3)">Continue <i
                             class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
 
-            <!-- STEP 4 -->
-            <div class="step-panel" id="step-4">
+            <!-- STEP 3 -->
+            <div class="step-panel" id="step-3">
                 <div class="panel-body">
                     <div class="step-header">
                         <div class="step-icon"><i class="fa-solid fa-user"></i></div>
@@ -304,7 +233,6 @@
                     </div>
 
                     <div class="summary-strip">
-                        <span class="pill accent" id="sType">Business Websites</span>
                         <span class="pill" id="sService">Business Website</span>
                         <span class="pill" id="sTimeline">Normal (1–2 weeks)</span>
                         <span class="pill accent" id="sBudget">₦80,000 — ₦200,000</span>
@@ -365,14 +293,16 @@
 
                     <div class="review-panel">
                         <strong><i class="fa-solid fa-file-lines"
-                                style="color:var(--accent);margin-right:0.4rem"></i>Review before sending</strong>
+                                style="color:var(--accent);margin-right:0.4rem"></i>Review before
+                            sending</strong>
                         <div id="reviewRows"></div>
                     </div>
                 </div>
                 <div class="actions">
                     <button class="btn-secondary" onclick="goStep(3)"><i class="fa-solid fa-arrow-left"></i>
                         Back</button>
-                    <button class="btn-wa" onclick="submitWA()"><i class="fa-brands fa-whatsapp"></i> Send via
+                    <button class="btn-wa" onclick="submitWA()"><i class="fa-brands fa-whatsapp"></i>
+                        Send via
                         WhatsApp</button>
                 </div>
             </div>
