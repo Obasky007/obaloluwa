@@ -170,6 +170,101 @@
     }
 
     /* Use main site's hero-trust and trust-item styles from style.css */
+    .hero-trust {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 0.6rem;
+        padding: 0.7rem 0;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 1.75rem;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .trust-item {
+        flex: 0 0 auto;
+        min-width: 120px;
+        max-width: 170px;
+        font-size: 0.78rem;
+        color: var(--text);
+        display: flex;
+        flex-direction: column;
+        gap: 0.18rem;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .trust-item strong {
+        font-family: 'Syne', sans-serif;
+        font-size: 0.92rem;
+        color: var(--accent);
+        font-weight: 800;
+        line-height: 1.05;
+    }
+
+    .trust-item span {
+        font-size: 0.68rem;
+        color: var(--text2);
+        line-height: 1.2;
+        letter-spacing: 0.01em;
+    }
+
+    .trust-item strong {
+        font-family: 'Syne', sans-serif;
+        font-size: 1.05rem;
+        color: var(--accent);
+        font-weight: 800;
+        line-height: 1.1;
+    }
+
+    @media (max-width: 1024px) {
+        .trust-item {
+            min-width: 150px;
+            max-width: 210px;
+            font-size: 0.88rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero-trust {
+            display: none;
+        }
+
+        .trust-item {
+            min-width: 110px;
+            max-width: 150px;
+            font-size: 0.72rem;
+        }
+
+        .trust-item strong {
+            font-size: 0.88rem;
+        }
+
+        .trust-item span {
+            font-size: 0.66rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .trust-item {
+            min-width: 100px;
+            max-width: 140px;
+            font-size: 0.68rem;
+        }
+
+        .trust-item strong {
+            font-size: 0.84rem;
+        }
+
+        .trust-item span {
+            font-size: 0.64rem;
+        }
+    }
 
     /* ── PROGRESS BAR ────────────────────────────── */
     .progress-bar {
@@ -235,6 +330,28 @@
     .step-text span {
         font-size: 0.72rem;
         color: var(--text-muted);
+    }
+
+    footer {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        overflow-x: hidden;
+    }
+
+    footer p {
+        white-space: nowrap;
+        flex: 0 0 auto;
+    }
+
+    .footer-links {
+        flex-wrap: nowrap;
+        min-width: 0;
+        justify-content: flex-end;
+        overflow-x: auto;
+    }
+
+    .footer-links a {
+        font-size: 0.95rem;
     }
 
     .progress-line {
@@ -855,6 +972,44 @@
             min-width: 45%;
         }
 
+        .step-text strong {
+            font-size: 0.92rem;
+        }
+
+        .step-text span {
+            font-size: 0.72rem;
+        }
+
+        .step-header-text strong {
+            font-size: 0.98rem;
+        }
+
+        .step-header-text span {
+            font-size: 0.82rem;
+        }
+
+        .summary-strip {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .pill {
+            font-size: 0.72rem;
+            padding: 0.28rem 0.75rem;
+        }
+
+        .budget-amount {
+            font-size: 1.25rem;
+        }
+
+        .budget-tag {
+            font-size: 0.72rem;
+        }
+
+        .review-row {
+            font-size: 0.8rem;
+        }
+
         .grid-3 {
             grid-template-columns: 1fr 1fr;
         }
@@ -909,10 +1064,39 @@
         }
 
         .step-text strong {
-            font-size: 0.9rem;
+            font-size: 0.88rem;
         }
 
         .step-text span {
+            font-size: 0.68rem;
+        }
+
+        .step-header-text strong {
+            font-size: 0.94rem;
+        }
+
+        .step-header-text span {
+            font-size: 0.8rem;
+        }
+
+        .summary-strip {
+            gap: 0.5rem;
+        }
+
+        .pill {
             font-size: 0.7rem;
+            padding: 0.24rem 0.65rem;
+        }
+
+        .budget-amount {
+            font-size: 1.15rem;
+        }
+
+        .budget-tag {
+            font-size: 0.7rem;
+        }
+
+        .review-row {
+            font-size: 0.78rem;
         }
     }
