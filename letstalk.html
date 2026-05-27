@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Your Service - Website Development</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="letstalk.css" />
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">obaloluwa<span>.</span>dev</a>
+        <a href="index.html" class="nav-back"><i class="fa-solid fa-arrow-left"></i> Back to site</a>
+    </nav>
+
+    <div class="page">
+
+        <!-- HEADER -->
+        <div class="page-header">
+            <div class="hero-tag">
+                <span class="dot"></span>
+                Start Your Project
+            </div>
+            <h1>Let's Build Your Website</h1>
+            <p>Tell me about your business, choose the website you need, and I'll send you a custom quote fast. Built to
+                help your business look professional, attract customers, and grow online.</p>
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <strong>3–7 Day</strong>
+                    <span>Delivery</span>
+                </div>
+                <div class="trust-item">
+                    <strong>Mobile‑First</strong>
+                    <span>Design</span>
+                </div>
+                <div class="trust-item">
+                    <strong>WhatsApp</strong>
+                    <span>Integration</span>
+                </div>
+                <div class="trust-item">
+                    <strong>SEO Optimized</strong>
+                    <span>For Better Visibility</span>
+                </div>
+                <div class="trust-item">
+                    <strong>Custom Quote</strong>
+                    <span>Fast & Personalized</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROGRESS -->
+        <div class="progress-bar">
+            <div class="progress-step" id="ps1" onclick="goStep(1)">
+                <div class="step-num active" id="sn1">1</div>
+                <div class="step-text"><strong>Service Type</strong><span>Pick a category</span></div>
+            </div>
+            <div class="progress-line" id="pl1"></div>
+            <div class="progress-step locked" id="ps2" onclick="goStep(2)">
+                <div class="step-num" id="sn2">2</div>
+                <div class="step-text"><strong>Choose Service</strong><span>Specific offering</span></div>
+            </div>
+            <div class="progress-line" id="pl2"></div>
+            <div class="progress-step locked" id="ps3" onclick="goStep(3)">
+                <div class="step-num" id="sn3">3</div>
+                <div class="step-text"><strong>Extras & Timeline</strong><span>Add-ons & budget</span></div>
+            </div>
+            <div class="progress-line" id="pl3"></div>
+            <div class="progress-step locked" id="ps4" onclick="goStep(4)">
+                <div class="step-num" id="sn4">4</div>
+                <div class="step-text"><strong>Your Details</strong><span>Submit & confirm</span></div>
+            </div>
+        </div>
+
+        <!-- WIZARD -->
+        <div class="wizard-card">
+
+            <!-- STEP 1 -->
+            <div class="step-panel active" id="step-1">
+                <div class="panel-body">
+                    <div class="step-header">
+                        <div class="step-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="step-header-text">
+                            <strong>What type of service do you need?</strong>
+                            <span>Select the category that matches your project</span>
+                        </div>
+                    </div>
+                    <div class="grid-3" id="serviceTypes">
+                        <div class="service-card selected" data-value="Business Websites">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <strong>Business Websites</strong>
+                            <span>Professional sites for small businesses</span>
+                        </div>
+                        <div class="service-card" data-value="Landing Pages">
+                            <i class="fa-solid fa-flag"></i>
+                            <strong>Landing Pages</strong>
+                            <span>High-converting campaign pages</span>
+                        </div>
+                        <div class="service-card" data-value="Restaurant & Food Websites">
+                            <i class="fa-solid fa-utensils"></i>
+                            <strong>Restaurant & Food Websites</strong>
+                            <span>Menus, online ordering & menu highlights</span>
+                        </div>
+                        <div class="service-card" data-value="Salon & Beauty Websites">
+                            <i class="fa-solid fa-scissors"></i>
+                            <strong>Salon & Beauty Websites</strong>
+                            <span>Bookings, galleries & service menus</span>
+                        </div>
+                        <div class="service-card" data-value="Event & Venue Websites">
+                            <i class="fa-solid fa-calendar-day"></i>
+                            <strong>Event & Venue Websites</strong>
+                            <span>Event listings, bookings & venue showcase</span>
+                        </div>
+                        <div class="service-card" data-value="Portfolio Websites">
+                            <i class="fa-solid fa-image"></i>
+                            <strong>Portfolio Websites</strong>
+                            <span>Showcase work for creatives & professionals</span>
+                        </div>
+                        <div class="service-card" data-value="Website Redesign">
+                            <i class="fa-solid fa-redo"></i>
+                            <strong>Website Redesign</strong>
+                            <span>Refresh look, speed and conversion</span>
+                        </div>
+                        <div class="service-card" data-value="SEO Optimization">
+                            <i class="fa-solid fa-search"></i>
+                            <strong>SEO Optimization</strong>
+                            <span>Improve visibility & organic traffic</span>
+                        </div>
+                        <div class="service-card" data-value="Website Maintenance">
+                            <i class="fa-solid fa-wrench"></i>
+                            <strong>Website Maintenance</strong>
+                            <span>Ongoing updates and security</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <span></span>
+                    <button class="btn-primary" onclick="goStep(2)">Continue <i
+                            class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="step-panel" id="step-2">
+                <div class="panel-body">
+                    <div class="step-header">
+                        <div class="step-icon"><i class="fa-solid fa-list-check"></i></div>
+                        <div class="step-header-text">
+                            <strong>Choose your specific service</strong>
+                            <span id="step2Sub">Select the offering that best fits your project</span>
+                        </div>
+                    </div>
+                    <div class="list-panel" id="serviceOptions">
+                        <div class="list-item selected" data-value="Business Website">
+                            <div class="service-copy"><strong>Business Website</strong><span>₦80,000 — ₦180,000</span>
+                            </div>
+                            <small>Simple, professional websites for small businesses</small>
+                            <div class="item-check"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                        <div class="list-item" data-value="Landing Page">
+                            <div class="service-copy"><strong>Landing Page</strong><span>₦50,000 — ₦120,000</span></div>
+                            <small>Single-page campaigns that convert visitors</small>
+                            <div class="item-check"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                        <div class="list-item" data-value="Portfolio Website">
+                            <div class="service-copy"><strong>Portfolio Website</strong><span>₦70,000 — ₦150,000</span>
+                            </div>
+                            <small>Showcase your work with a clean, visual site</small>
+                            <div class="item-check"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                        <div class="list-item" data-value="Restaurant Website">
+                            <div class="service-copy"><strong>Restaurant Website</strong><span>₦90,000 — ₦180,000</span>
+                            </div>
+                            <small>Menus, reservations and food showcase</small>
+                            <div class="item-check"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                        <div class="list-item" data-value="Salon / Beauty Website">
+                            <div class="service-copy"><strong>Salon / Beauty Website</strong><span>₦80,000 —
+                                    ₦160,000</span></div>
+                            <small>Service menus, galleries and booking options</small>
+                            <div class="item-check"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                        <div class="list-item" data-value="Event Website">
+                            <div class="service-copy"><strong>Event Website</strong><span>₦90,000 — ₦200,000</span>
+                            </div>
+                            <small>Event pages, schedules and venue info</small>
+                            <div class="item-check"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                        <div class="list-item" data-value="Website Redesign">
+                            <div class="service-copy"><strong>Website Redesign</strong><span>₦70,000 — ₦170,000</span>
+                            </div>
+                            <small>Refresh design, improve speed and conversions</small>
+                            <div class="item-check"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                        <div class="list-item" data-value="SEO Optimization">
+                            <div class="service-copy"><strong>SEO Optimization</strong><span>₦40,000 — ₦100,000</span>
+                            </div>
+                            <small>On-page SEO, metadata and indexing improvements</small>
+                            <div class="item-check"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                        <div class="list-item" data-value="Website Maintenance">
+                            <div class="service-copy"><strong>Website Maintenance</strong><span>₦20,000 —
+                                    ₦50,000/month</span></div>
+                            <small>Monthly updates, backups and security</small>
+                            <div class="item-check"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="btn-secondary" onclick="goStep(1)"><i class="fa-solid fa-arrow-left"></i>
+                        Back</button>
+                    <button class="btn-primary" onclick="goStep(3)">Continue <i
+                            class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="step-panel" id="step-3">
+                <div class="panel-body">
+                    <div class="step-header">
+                        <div class="step-icon"><i class="fa-solid fa-sliders"></i></div>
+                        <div class="step-header-text">
+                            <strong>Add-ons & Timeline</strong>
+                            <span>Enhance your project and set your delivery speed</span>
+                        </div>
+                    </div>
+
+                    <p class="sub-label">Optional Add-on Services</p>
+                    <div class="addons-grid" id="addonsList">
+                        <div class="addon-card" data-value="SEO Optimization">
+                            <div class="addon-check"><i class="fa-solid fa-check"></i></div>
+                            <div><strong>SEO Optimization</strong><small>Improve search visibility and on-page
+                                    SEO.</small></div>
+                        </div>
+                        <div class="addon-card" data-value="Content Writing">
+                            <div class="addon-check"><i class="fa-solid fa-check"></i></div>
+                            <div><strong>Content Writing</strong><small>Clear, conversion-focused website copy.</small>
+                            </div>
+                        </div>
+                        <div class="addon-card" data-value="Logo Design">
+                            <div class="addon-check"><i class="fa-solid fa-check"></i></div>
+                            <div><strong>Logo Design</strong><small>Simple, modern logo for your brand.</small></div>
+                        </div>
+                        <div class="addon-card" data-value="WhatsApp Integration">
+                            <div class="addon-check"><i class="fa-solid fa-check"></i></div>
+                            <div><strong>WhatsApp Integration</strong><small>Direct customer chat from your
+                                    website.</small></div>
+                        </div>
+                        <div class="addon-card" data-value="Payment Gateway">
+                            <div class="addon-check"><i class="fa-solid fa-check"></i></div>
+                            <div><strong>Payment Gateway</strong><small>Setup for online payments and checkout.</small>
+                            </div>
+                        </div>
+                        <div class="addon-card" data-value="Social Media Setup">
+                            <div class="addon-check"><i class="fa-solid fa-check"></i></div>
+                            <div><strong>Social Media Setup</strong><small>Profile setup and basic branding for
+                                    social.</small></div>
+                        </div>
+                    </div>
+
+                    <p class="sub-label">Project Timeline</p>
+                    <div class="timeline-grid" id="timelineOptions">
+                        <button class="timeline-btn"
+                            data-value="Flexible (2-3 weeks)"><strong>Flexible</strong><small>2–3 weeks</small></button>
+                        <button class="timeline-btn selected"
+                            data-value="Normal (1-2 weeks)"><strong>Normal</strong><small>1–2 weeks</small></button>
+                        <button class="timeline-btn" data-value="Urgent (3-7 days)"><strong>Urgent</strong><small>3–7
+                                days</small></button>
+                        <button class="timeline-btn" data-value="Rush (24-72 hrs)"><strong>Rush</strong><small>24–72
+                                hrs</small></button>
+                    </div>
+
+                    <div class="budget-card">
+                        <div>
+                            <strong>Estimated project budget</strong>
+                            <div class="budget-amount" id="budgetAmt">₦80,000 — ₦200,000</div>
+                        </div>
+                        <div class="budget-tag" id="budgetTier">Professional</div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="btn-secondary" onclick="goStep(2)"><i class="fa-solid fa-arrow-left"></i>
+                        Back</button>
+                    <button class="btn-primary" onclick="goStep(4)">Continue <i
+                            class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="step-panel" id="step-4">
+                <div class="panel-body">
+                    <div class="step-header">
+                        <div class="step-icon"><i class="fa-solid fa-user"></i></div>
+                        <div class="step-header-text">
+                            <strong>Your Details</strong>
+                            <span>Fill in your contact info so I can send you a quote</span>
+                        </div>
+                    </div>
+
+                    <div class="summary-strip">
+                        <span class="pill accent" id="sType">Business Websites</span>
+                        <span class="pill" id="sService">Business Website</span>
+                        <span class="pill" id="sTimeline">Normal (1–2 weeks)</span>
+                        <span class="pill accent" id="sBudget">₦80,000 — ₦200,000</span>
+                    </div>
+
+                    <div class="field-grid">
+                        <div class="field-group">
+                            <label>Your Name <span class="req">*</span></label>
+                            <input id="clientName" type="text" placeholder="Enter your full name"
+                                oninput="updateReview()" />
+                        </div>
+                        <div class="field-group">
+                            <label>Email Address <span class="req">*</span></label>
+                            <input id="clientEmail" type="email" placeholder="your@email.com"
+                                oninput="updateReview()" />
+                        </div>
+                    </div>
+                    <div class="field-grid">
+                        <div class="field-group">
+                            <label>Phone Number <span class="req">*</span></label>
+                            <input id="clientPhone" type="tel" placeholder="+234 800 000 0000"
+                                oninput="updateReview()" />
+                        </div>
+                        <div class="field-group">
+                            <label>Country</label>
+                            <select id="clientCountry" onchange="updateReview()">
+                                <option>Nigeria</option>
+                                <option>Ghana</option>
+                                <option>Kenya</option>
+                                <option>United Kingdom</option>
+                                <option>United States</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field-grid">
+                        <div class="field-group">
+                            <label>How did you hear about me?</label>
+                            <select id="clientSource" onchange="updateReview()">
+                                <option value="">Select an option</option>
+                                <option>Google Search</option>
+                                <option>Instagram</option>
+                                <option>WhatsApp</option>
+                                <option>Referral</option>
+                                <option>Twitter / X</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field-grid">
+                        <div class="field-group full">
+                            <label>Project Description</label>
+                            <textarea id="projectDesc"
+                                placeholder="Tell me briefly about your business and what you need..."
+                                oninput="updateReview()"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="review-panel">
+                        <strong><i class="fa-solid fa-file-lines"
+                                style="color:var(--accent);margin-right:0.4rem"></i>Review before sending</strong>
+                        <div id="reviewRows"></div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="btn-secondary" onclick="goStep(3)"><i class="fa-solid fa-arrow-left"></i>
+                        Back</button>
+                    <button class="btn-wa" onclick="submitWA()"><i class="fa-brands fa-whatsapp"></i> Send via
+                        WhatsApp</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="letstalk.js"></script>
+</body>
+
+</html>
